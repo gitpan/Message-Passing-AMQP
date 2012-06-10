@@ -18,7 +18,7 @@ after '_set_queue' => sub {
         on_consume => sub {
             my $message = shift;
             try {
-                $self->output_to->consume($self->decode($message->{body}->payload));
+                $self->output_to->consume($message->{body}->payload);
             }
             catch {
                 warn("Error in consume_message callback: $_");
@@ -38,6 +38,10 @@ after '_set_queue' => sub {
 =head1 NAME
 
 Message::Passing::Input::AMQP - input logstash messages from AMQP.
+
+=head1 SYNOPSIS
+
+    message-pass --output STDOUT --input AMQP --input_options '{"queue_name":"test","exchange_name":"test"}'
 
 =head1 DESCRIPTION
 

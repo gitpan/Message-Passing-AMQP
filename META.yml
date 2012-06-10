@@ -1,5 +1,5 @@
 ---
-abstract: 'input and output logstash messages via AMQP.'
+abstract: 'input and output message-pass messages via AMQP.'
 author:
   - 'Tomas (t0m) Doran <bobtfish@bobtfish.net>'
 build_requires:
@@ -25,12 +25,12 @@ requires:
   AnyEvent::RabbitMQ: 1.05
   JSON: 0
   JSON::XS: 0
-  Message::Passing: 0.001
+  Message::Passing: 0.006
   Moose: 0
   Task::Weaken: 0
   Try::Tiny: 0
   namespace::autoclean: 0
 resources:
   repository: git://github.com/suretec/Message-Passing-AMQP.git
-version: 0.001
+version: 0.002
 x_authority: GHENRY
