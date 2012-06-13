@@ -25,12 +25,12 @@ requires:
   AnyEvent::RabbitMQ: 1.05
   JSON: 0
   JSON::XS: 0
-  Message::Passing: 0.006
+  Message::Passing: 0.009
   Moose: 0
   Task::Weaken: 0
   Try::Tiny: 0
   namespace::autoclean: 0
 resources:
   repository: git://github.com/suretec/Message-Passing-AMQP.git
-version: 0.002
+version: 0.003
 x_authority: GHENRY

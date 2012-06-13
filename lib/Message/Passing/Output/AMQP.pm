@@ -31,6 +31,7 @@ sub consume {
     );
 }
 
+__PACKAGE__->meta->make_immutable;
 1;
 
 =head1 NAME
@@ -39,7 +40,7 @@ Message::Passing::Output::AMQP - output messages to AMQP.
 
 =head1 SYNOPSIS
 
-    message-pass --input STDIN --output AMQP --output_options '{"exchange_name":"test"}'
+    message-pass --input STDIN --output AMQP --output_options '{"exchange_name":"test","hostname":"127.0.0.1","username":"guest","password":"guest"}'
 
 =head1 DESCRIPTION
 
